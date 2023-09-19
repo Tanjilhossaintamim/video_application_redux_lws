@@ -33,9 +33,12 @@ const videosSlice = createSlice({
 });
 
 // thunk
-export const fetchVideos = createAsyncThunk("videos/fetchvideos", async () => {
-  const videos = await getVideos();
-  return videos;
-});
+export const fetchVideos = createAsyncThunk(
+  "videos/fetchvideos",
+  async ({ selectedTags, search }) => {
+    const videos = await getVideos({selectedTags, search});
+    return videos;
+  }
+);
 
 export default videosSlice.reducer;

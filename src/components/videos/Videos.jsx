@@ -8,10 +8,12 @@ const Videos = () => {
   const { videos, isLoading, error, isError } = useSelector(
     (state) => state.videos
   );
+  const { selectedTags, search } = useSelector((state) => state.filter);
+  
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchVideos());
-  }, []);
+    dispatch(fetchVideos({ selectedTags, search }));
+  }, [selectedTags, search, dispatch]);
   // desicion making
   let content = null;
   if (isLoading) content = <Loading />;
