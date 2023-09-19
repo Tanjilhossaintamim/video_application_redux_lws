@@ -35,8 +35,8 @@ const relatedVideosSlice = createSlice({
 // thunk
 export const fetchRelatedVideos = createAsyncThunk(
   "relatedVideos/fetchRelatedVideos",
-  async (query, id) => {
-    const videos = await getRelatedVideos(query, id);
+  async ({ tags, currentVideoId }) => {
+    const videos = await getRelatedVideos({ tags, currentVideoId });
     return videos;
   }
 );

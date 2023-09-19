@@ -26,8 +26,8 @@ const LikeUnlike = ({ likes, unlikes }) => {
 };
 
 LikeUnlike.propTypes = {
-  likes: PropTypes.string,
-  unlikes: PropTypes.string,
+  likes: PropTypes.number,
+  unlikes: PropTypes.number,
 };
 
 export default LikeUnlike;
