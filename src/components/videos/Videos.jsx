@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import Video from "./Video";
 import { useEffect } from "react";
-import { fetchVideos } from "../../redux/features/videos/videoSlice";
+import { fetchVideos } from "../../redux/features/videos/videosSlice";
 import Loading from "../ui/Pagination/Loading";
 
 const Videos = () => {
