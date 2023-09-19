@@ -33,7 +33,7 @@ const tagSlice = createSlice({
 });
 
 // thunk
-export const fetchTags = createAsyncThunk("videos/fetchvideos", async () => {
+export const fetchTags = createAsyncThunk("tags/fetchtags", async () => {
   const tags = await getTags();
   return tags;
 });
